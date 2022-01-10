@@ -31,4 +31,3 @@ def play(word):
     print(word_completion)
     print("\n")
 
-play()
