@@ -9,7 +9,7 @@ from game import hangman_stages
 
 
 
-player_name = input("Hello players, please enter your name:\n").upper()
+player_name = input("Hello player, please enter your name:\n").upper()
 
 def get_word():
     word = random.choice(word_list)
@@ -63,7 +63,7 @@ def game(word):
     if guessed:
         print(f"Well done {player_name}, you win")
     else:
-        print(f"Sorry {player_name},you lost, word was" + word + "try again")
+        print(f"Sorry {player_name},you lost, word was " + word + " try again")
 
 
 def main():
