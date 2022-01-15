@@ -20,3 +20,13 @@
 
 * The playes can see the game(displayed hangman and a line where he can guess the letter in a word which is uknown and randomly generated from the list of words)
 
+
+# Features
+
+## Existing Features
+* words are randomly generated from the list of words
+* player name is used thru entire game
+* counts number of left tries
+* player must enter letters from alphabet
+
+

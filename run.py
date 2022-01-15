@@ -18,7 +18,7 @@ def get_word():
 
 def game(word):
     word_completion = "_" * len(word)
-    guessed = false
+    guessed = False
     guessed_letters = []
     guessed_words = []
     tries = 6
