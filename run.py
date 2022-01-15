@@ -9,9 +9,8 @@ from game import hangman_stages
 
 
 
-player_name = input("Hello players, please enter your name: ")
+player_name = input("Hello players, please enter your name:\n").upper()
  
-
 def get_word():
     word = random.choice(word_list)
     return word.upper()
@@ -27,7 +26,7 @@ def game(word):
     print(word_completion)
     print("\n")
     while not guessed and tries > 0:
-        guess = input("please guess a letter or word: ").upper()
+        guess = input("please guess a letter or word:\n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"Hey, {player_name} you already guessed the letter", guess)
@@ -42,7 +41,7 @@ def game(word):
                 symbols = [i for i, letter in enumerate(word) if letter == guess]
                 for index in symbols:
                     word_list[index] = guess
-                word_completion = "".join(word_as_list)
+                word_completion = "".join(word_list)
                 if"_" not in word_completion:
                     guessed = True
 
@@ -64,14 +63,18 @@ def game(word):
     if guessed:
         print(f"Well done {player_name}, you win")
     else:
-        print(f"Sorry {player_name},you lost, word was" +word+ "try again")
+        print(f"Sorry {player_name},you lost, word was" + word + "try again")
 
 
 def main():
     word = get_word()
-    play(word)
+    game(word)
 
-main()
+
+
+
+if __name__ == "__main__":
+    main()
 
 
 
