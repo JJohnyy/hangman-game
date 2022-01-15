@@ -46,5 +46,32 @@ def game(word):
                 if"_" not in word_completion:
                     guessed = True
 
+        elif len(guess) == len(word) and guess.isalpha():
+            if guess in guessed_words:
+                print(f"Well done {player_name} you guessed the word", guess)
+            elif guess != word:
+                print(guess, "is not the word")
+                tries -= 1
+                guessed_words.append(guess)
+            else:
+                guessed = True
+                word_completion = word
+        else:
+            print("Not a valid guess")
+        print(hangman_stages(tries))
+        print(word_completion)
+        print("\n")
+    if guessed:
+        print(f"Well done {player_name}, you win")
+    else:
+        print(f"Sorry {player_name},you lost, word was" +word+ "try again")
+
+
+def main():
+    word = get_word()
+    play(word)
+
+main()
+
 
 
