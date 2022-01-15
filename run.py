@@ -10,7 +10,7 @@ from game import hangman_stages
 
 
 player_name = input("Hello players, please enter your name:\n").upper()
- 
+
 def get_word():
     word = random.choice(word_list)
     return word.upper()
